@@ -9,6 +9,7 @@ class FoodsController < ApplicationController
     case params[:category]
       when "korean"
         @category = "한식"
+        
       when "japanese"
         @category = "일식"
       when "chinese"
