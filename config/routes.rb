@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   post'users/login_complete'
 
-  post 'users/logout_complete'
+  get 'users/logout_complete'
 
   root'foods#posts'
 
