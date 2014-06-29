@@ -34,6 +34,7 @@ class FoodsController < ApplicationController
     post.category = params[:post_category]
     post.title = params[:post_title]
     post.content = params[:post_content]
+    post.image =params[:image]
     if post.save
       flash[:alert] = "저장되었습니다."
       redirect_to "/foods/show/#{post.id}"
@@ -74,6 +75,7 @@ class FoodsController < ApplicationController
     else
       flash[:alert] = "삭제 권한이 없습니다."
       redirect_to :back
+    end
   end
 
   def write_comment_complete
@@ -97,6 +99,4 @@ class FoodsController < ApplicationController
       redirect_to :back
     end
   end
-
-
 end
